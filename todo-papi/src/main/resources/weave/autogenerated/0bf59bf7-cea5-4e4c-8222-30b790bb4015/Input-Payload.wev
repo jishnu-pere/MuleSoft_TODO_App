@@ -1,0 +1,12 @@
+%dw 2.0
+
+type auto_0bf59bf7_cea5_4e4c_8222_30b790bb4015_Input_Payload = {
+  name: String, 
+  description: String, 
+  reporter: String, 
+  id?: Number, 
+  assignee: String, 
+  priority?: Number, 
+  _?: Any
+}
+

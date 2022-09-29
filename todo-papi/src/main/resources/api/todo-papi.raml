@@ -1,0 +1,31 @@
+#%RAML 1.0
+title: todo-papi
+
+/tasks:
+  description: Read all tasks
+  get:
+    body:
+      application/json:
+    responses:
+      200:
+        body:
+          application/json:
+            type: !include types/task-entity.raml
+  /{taskId}:
+    description: Update task by Id
+    put:
+      body:
+        application/json:
+          type: !include types/task-entity.raml
+      responses:
+        200:
+          body:
+            application/json:
+    get:
+      description: Read task by Id
+      responses:
+        200:
+          body:
+            application/json:
+              type: !include types/task-entity.raml
+              
